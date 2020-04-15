@@ -18,8 +18,8 @@
         <div class="clearfix"></div>
     </nav>
 
-    <h1>Homepage</h1>
-    
+    <h1>Lista studenti</h1>
+
     <div class="footer">
         Credits: Cristian Carrino
     </div>
