@@ -10,20 +10,20 @@
 <body>
     <h1 id="title">Questa è la lezione 2 di Javascript e io ho id = title</h1>
     <h2>Ciao io sono un h2</h2>
-    <h2>Ciao io sono un h2</h2>
-    <h2>Ciao io sono un h2</h2>
-    <h2>Ciao io sono un h2</h2>
+    <h2 class="ornella">Ciao io sono un h2 e ho classe ornella</h2>
+    <h3 class="ornella">Ciao io sono un h3 e ho classe ornella</h3>
+    <h3 class="miriana">Ciao io sono un h3 e ho classe miriana</h3>
 
     <hr>
 
     <div>
         <select id="selected-color">
             <option value="black">Nero</option>
-            <option value="red">Rosso</option>
-            <option value="green">Verde</option>
+            <option value="#E84B56">Rosso</option>
+            <option value="#6CC551">Verde</option>
             <option value="#2196f3">Blu chiaro</option>
-            <option value="orange">Arancione</option>
-            <option value="pink">Rosa</option>
+            <option value="#FC8C57">Arancione</option>
+            <option value="#E23D86">Rosa</option>
         </select>
     </div>
 
@@ -33,6 +33,26 @@
         </li>    
         <li>
             <button onclick="changeColorToH2()">Cambia colore a tutti gli h2</button>
+        </li>   
+        <li>
+            <button onclick="changeColorToH3()">Cambia colore a tutti gli h3</button>
+        </li> 
+    </ul>
+
+    <hr>    
+
+    <ul>
+        <li>
+            <button onclick="addBorderedToH3()">Aggiungi la classe bordered a tutti gli h3</button>
+        </li>
+        <li>
+            <button onclick="removeBorderedToH3()">Rimuovi la classe bordered a tutti gli h3</button>
+        </li>
+        <li>
+            <button onclick="addRedToOrnella()">Aggiungi la classe red a tutti gli elementi di classe ornella</button>
+        </li>
+        <li>
+            <button onclick="removeRedToOrnella()">Rimuovi la classe red a tutti gli elementi di classe ornella</button>
         </li>
     </ul>
 
