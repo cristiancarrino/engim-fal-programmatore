@@ -26,6 +26,26 @@ function changeColorToH3 () {
     }
 }
 
+function changeColorToOrnella () {
+    var select = document.getElementById('selected-color');
+    var color = select.value;
+
+    var elements = document.getElementsByClassName('ornella');
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.color = color;
+    }
+}
+
+function changeColorToMiriana () {
+    var select = document.getElementById('selected-color');
+    var color = select.value;
+
+    var elements = document.getElementsByClassName('miriana');
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.color = color;
+    }
+}
+
 function addBorderedToH3 () {
     var elements = document.getElementsByTagName('h3');
     for (var i = 0; i < elements.length; i++) {
