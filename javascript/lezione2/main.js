@@ -73,3 +73,31 @@ function removeRedToOrnella () {
         elements[i].classList.remove('red');
     }
 }
+
+function addBorderedToThis (element) {
+    element.classList.add('bordered');
+    element.innerHTML = 'Eccoti qui amore mio :)';
+    element.style.background = 'lightyellow';
+}
+
+function removeBorderedToThis (element) {
+    element.classList.remove('bordered');
+    element.innerHTML = 'Sei andato via da me :\'(';
+    element.style.background = 'white';
+}
+
+function addColorBorderToThis (element) {
+    var select = document.getElementById('selected-color');
+    var color = select.value;
+
+    var select2 = document.getElementById("selected-color2");
+    var color2 = select2.value;
+
+    element.style.border = '2px solid ' + color;
+    element.style.background = color2;
+}
+
+function removeColorBorderToThis (element) {
+    element.style.border = 'none';
+    element.style.background = 'none';
+}

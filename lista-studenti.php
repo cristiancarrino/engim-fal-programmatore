@@ -15,7 +15,7 @@
     <h1>Lista studenti</h1>
 
     <?php
-        $sql = "SELECT * FROM student";
+        $sql = "SELECT * FROM student"; //SELECT subject.id, subject.name, prof.firstname, prof.lastname FROM subject JOIN prof ON subject.prof_id = prof.id
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
