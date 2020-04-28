@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 3</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Lista studenti</h1>
+    <div>
+        Id: 1 - Nome: Cristian - Cognome: Carrino 
+        <button onclick="showModal()">Elimina</button>
+    </div>
+    <div>
+        Id: 1 - Nome: Cristian - Cognome: Carrino 
+        <button onclick="showModal()">Elimina</button>
+    </div>
+    <div>
+        Id: 1 - Nome: Cristian - Cognome: Carrino 
+        <button onclick="showModal()">Elimina</button>
+    </div>
+    <div>
+        Id: 1 - Nome: Cristian - Cognome: Carrino 
+        <button onclick="showModal()">Elimina</button>
+    </div>
+
+    <div id="sfondo-nero" class="hidden"></div>
+    <div id="modal" class="hidden">
+        <div class="modal-header">
+            Sei sicuro?????????
+        </div>
+        <div class="modal-body">
+            ATTENZIONE! Stai cancellando uno studente!! Sai quello che fai??
+        </div>
+        <div class="modal-footer">
+            <button onclick="closeModal()">No, anulla</button>
+            <button class="btn-alert" onclick="closeModal()">Si, cancella studente</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
