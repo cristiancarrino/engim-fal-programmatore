@@ -30,6 +30,40 @@
         }
     ?>
 
+    <hr>
+
+    <h3>Aggiungi uno studente</h3>
+    <form action="add-student.php">
+        <div>
+            <div>
+                <label for="">Nome:</label>
+            </div>
+            <div>
+                <input type="text" placeholder="Aggiungi nome" name="firstname">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="">Cognome:</label>
+            </div>
+            <div>
+                <input type="text" placeholder="Aggiungi cognome" name="lastname">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="">Età:</label>
+            </div>
+            <div>
+                <input type="number" placeholder="Aggiungi età" name="age">
+            </div>
+        </div>
+
+        <div>
+            <button type="submit">Invia</button>
+        </div>
+    </form>
+
     <?php include "footer.php"; ?>
 </body>
 </html>
