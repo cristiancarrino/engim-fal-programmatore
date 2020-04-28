@@ -93,11 +93,16 @@ function addColorBorderToThis (element) {
     var select2 = document.getElementById("selected-color2");
     var color2 = select2.value;
 
+    var select3 = document.getElementById("selected-color3");
+    var color3 = select3.value;
+
     element.style.border = '2px solid ' + color;
     element.style.background = color2;
+    element.style.color = color3;
 }
 
 function removeColorBorderToThis (element) {
     element.style.border = 'none';
     element.style.background = 'none';
+    element.style.color = 'black';
 }
