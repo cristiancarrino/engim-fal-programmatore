@@ -1,10 +1,8 @@
 <?php include "create-connection.php"; ?>
 
 <?php
-    $firstname = $_GET["firstname"];
-    $lastname = $_GET["lastname"];
-    $age = $_GET["age"];
-    $sql = "INSERT INTO student (firstname, lastname, age) VALUES ('" . $firstname . "', '" . $lastname . "', " . $age . ")";
+    $id = $_GET["id"];
+    $sql = "DELETE FROM prof WHERE prof.id = " . $id;
     $result = $conn->query($sql);
 ?>
 
@@ -13,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aggiungi studente</title>
+    <title>Cancella prof</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,14 +20,14 @@
 
     <?php 
         if ($result) {
-            echo "<h1 style='color: green'>Studente aggiunto con successo!!!</h1>";
+            echo "<h1 style='color: green'>Professore cancellato con successo!!!</h1>";
         } else {
-            echo "<h1 style='color: red'>ERRORE! Impossibile aggiungere lo studente</h1>";
+            echo "<h1 style='color: red'>ERRORE! Impossibile cancellare il professore</h1>";
             echo "<p>Query che ho tentato di eseguire: " . $sql . "</p>";
         }
     ?>
 
-    <a href="lista-studenti.php">Torna alla lista studenti</a>
+    <a href="lista-prof.php">Torna alla lista professori</a>
 
     <?php include "footer.php"; ?>
 </body>

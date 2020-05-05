@@ -15,13 +15,13 @@
     <h1>Lista studenti</h1>
 
     <?php
-        $sql = "SELECT * FROM student"; //SELECT subject.id, subject.name, prof.firstname, prof.lastname FROM subject JOIN prof ON subject.prof_id = prof.id
+        $sql = "SELECT * FROM student ORDER BY lastname ASC";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
-                echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+                echo "id: " . $row["id"]. " - Name: " . $row["lastname"]. " " . $row["firstname"]. "<br>";
             }
 
             echo "Numero di risultati: " . $result->num_rows;
