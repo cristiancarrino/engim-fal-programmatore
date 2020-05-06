@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 5</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <h1>Lista studenti</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Modifica</th>
+                <th>Cancella</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Cristian</td>
+                <td>Carrino</td>
+                <td><a href="edit-student.php?id=1"><i class="fas fa-pencil-alt"></i> Modifica</a></td>
+                <td><button class="btn-alert" onclick="showModal(1)"><i class="fas fa-trash-alt"></i> Elimina</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Dario</td>
+                <td>Mennillo</td>
+                <td><a href="edit-student.php?id=2"><i class="fas fa-pencil-alt"></i> Modifica</a></td>
+                <td><button class="btn-alert" onclick="showModal(2)"><i class="fas fa-trash-alt"></i> Elimina</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Luigi</td>
+                <td>Franceschini</td>
+                <td><a href="edit-student.php?id=3"><i class="fas fa-pencil-alt"></i> Modifica</a></td>
+                <td><button class="btn-alert" onclick="showModal(3)"><i class="fas fa-trash-alt"></i> Elimina</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Inizio modale -->
+    <div id="sfondo-nero" class="hidden"></div>
+    <div id="modal" class="hidden">
+        <div class="modal-header">
+            Sei sicuro?????????
+        </div>
+        <div class="modal-body">
+            ATTENZIONE! Stai cancellando uno studente!! Sai quello che fai??
+        </div>
+        <div class="modal-footer">
+            <button onclick="closeModal()">No, anulla</button>
+            <a id="link-elimina" class="btn-alert" href="">Si, cancella studente</a>
+        </div>
+    </div>
+    <!-- Fine modale -->
+
+    <script src="main.js"></script>
+</body>
+</html>
