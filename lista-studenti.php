@@ -15,19 +15,39 @@
     <h1>Lista studenti</h1>
 
     <?php
-        $sql = "SELECT * FROM student ORDER BY lastname ASC";
+        $sql = "SELECT * FROM student ORDER BY student.lastname";
         $result = $conn->query($sql);
+    ?>
 
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-                echo "id: " . $row["id"]. " - Name: " . $row["lastname"]. " " . $row["firstname"]. "<br>";
-            }
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Cognome</th>
+                <th>Nome</th>
+                <th>Eta</th>
+                <th>Modifica</th>
+                <th>Cancella</th>
+            </tr>
+        </thead>
+        <tbody>            
+            <?php
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr>
+                        <td>" . $row["id"]. "</td>
+                        <td>" . $row["lastname"]. "</td>
+                        <td>" . $row["firstname"]. "</td>
+                        <td>" . $row["age"]. "</td>
+                        <td><a href='edit-student.php?id=" . $row["id"] . "'>Modifica</a></td>
+                        <td><a href='delete-student.php?id=" . $row["id"] . "'>Cancella</a></td>
+                    </tr>";
+                }
+            ?>
+        </tbody>
+    </table>
 
-            echo "Numero di risultati: " . $result->num_rows;
-        } else {
-            echo "0 results";
-        }
+    <?php
+        echo "<div>Numero di risultati: " . $result->num_rows . "</div>";
     ?>
 
     <hr>

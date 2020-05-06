@@ -1,0 +1,23 @@
+.table {
+    width: 50%;
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    text-align: center;
+}
+
+.table td {
+    border: 1px solid lightgray;
+}
+
+.fas.fa-trash-alt:hover {
+    color: lightsalmon;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
