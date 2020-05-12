@@ -1,16 +1,7 @@
 <?php include "create-connection.php"; ?>
 
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engim - Lista professori</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>    
-    <?php include "navbar.php"; ?>
+<?php $title = "Lista prof"; ?> 
+<?php include "navbar.php"; ?>
 
     <h1>Lista professori</h1>
 

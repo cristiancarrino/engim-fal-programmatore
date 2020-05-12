@@ -21,6 +21,7 @@ body {
     top: 0;
     width: 100%;
     line-height: 27px;
+    border-bottom: 1px solid white;
 }
 
 .navbar h1 {
@@ -55,6 +56,7 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
+    border-top: 1px solid white;
 }
 
 .float-right {
@@ -68,4 +70,17 @@ body {
 
 .fas.fa-bars {
     cursor: pointer;
+}
+
+.sidebar {
+    float: left;
+    width: 200px;
+    border-right: 1px solid gray;
+    background: #555555;
+    height: calc(100vh - 49px - 38px);
+    color: white;
+}
+
+.page-content {
+    float: left;
 }

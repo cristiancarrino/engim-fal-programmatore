@@ -16,17 +16,8 @@ ORDER BY
     vote.vote DESC
 -->
 
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engim - Lista materie</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>    
-    <?php include "navbar.php"; ?>
+<?php $title = "Lista materie"; ?> 
+<?php include "navbar.php"; ?>
 
     <h1>Lista materie</h1>
 
