@@ -1,5 +1,21 @@
 <?php include "create-connection.php"; ?>
 
+<!--
+SELECT 
+	student.firstname, 
+    student.lastname, 
+    subject.name, 
+    vote.vote
+FROM student 
+LEFT JOIN vote ON 
+	student.id = vote.student_id 
+LEFT JOIN subject ON 
+	vote.subject_id = subject.id 
+ORDER BY 
+	subject.name DESC,
+    vote.vote DESC
+-->
+
 <!DOCTYPE html>
 <html lang="it">
 <head>

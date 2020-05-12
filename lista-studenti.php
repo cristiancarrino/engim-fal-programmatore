@@ -8,6 +8,7 @@
     <title>Engim - Lista studenti</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.css">
 </head>
 <body>    
     <?php include "navbar.php"; ?>

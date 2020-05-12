@@ -61,3 +61,11 @@ body {
     float: right;
     margin-right: 40px;
 }
+
+.margin-right {
+    margin-right: 20px;
+}
+
+.fas.fa-bars {
+    cursor: pointer;
+}

@@ -26,6 +26,7 @@
                 <th>Nome</th>
                 <th>Cognome</th>
                 <th>Eta</th>
+                <th>Modifica</th>
                 <th>Cancella</th>
             </tr>
         </thead>
@@ -37,7 +38,8 @@
                         <td>" . $row["firstname"]. "</td>
                         <td>" . $row["lastname"]. "</td>
                         <td>" . $row["age"]. "</td>
-                        <td><a href='delete-prof.php?id=" . $row["id"] . "'>Cancella prof</a></td>
+                        <td><a href='edit-prof.php?id=" . $row["id"] . "'>Modifica</a></td>
+                        <td><a href='delete-prof.php?id=" . $row["id"] . "'>Cancella</a></td>
                     </tr>";
                 }
             ?>

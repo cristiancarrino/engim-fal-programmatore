@@ -1,4 +1,5 @@
 <nav class="navbar">
+    <h1><i class="fas fa-bars margin-right"></i></h1>
     <a href="index.php"><h1>Homepage</h1></a>
     <div class="menu">
         <a href="lista-studenti.php" class="navbar-link">Lista studenti</a>

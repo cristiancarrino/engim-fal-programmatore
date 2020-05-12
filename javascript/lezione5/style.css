@@ -40,8 +40,6 @@ button {
     padding: 5px 10px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 1rem;
-    line-height: 1.1rem;
 }
 .btn-alert {
     background: #ffbdb9;
@@ -51,4 +49,18 @@ button {
 
 .hidden {
     display: none;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid gray;
+}
+.table th,
+.table td {
+    text-align: center;
+    border: 1px solid gray;
+}
+.table tr:hover {
+    background: lightgray;
 }
