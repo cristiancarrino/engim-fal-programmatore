@@ -84,3 +84,14 @@ body {
 .page-content {
     float: left;
 }
+
+.table {
+    width: 100%;
+    /* border-collapse: collapse; */
+}
+
+.table th,
+.table td {
+    text-align: center;
+    border: 1px solid gray;
+}

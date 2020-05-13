@@ -16,6 +16,7 @@
             <a href="lista-studenti.php" class="navbar-link">Lista studenti</a>
             <a href="lista-prof.php" class="navbar-link">Lista professori</a>
             <a href="lista-materie.php" class="navbar-link">Lista materie</a>
+            <a href="lista-voti.php" class="navbar-link">Lista voti</a>
         </div>
         <div class="clearfix"></div>
     </nav>
