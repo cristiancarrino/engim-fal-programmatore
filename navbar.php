@@ -20,3 +20,6 @@
         </div>
         <div class="clearfix"></div>
     </nav>
+
+    <div class="sidebar"></div>
+    <div class="page-content sidebar-close" id="page-content">

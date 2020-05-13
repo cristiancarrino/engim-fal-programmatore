@@ -3,9 +3,6 @@
     $title = "Lista studenti";
     include "navbar.php";
 ?>
-
-    <div class="sidebar"></div>
-    <div class="page-content" id="page-content">
         <h1>Lista studenti</h1>
 
         <?php
@@ -75,7 +72,6 @@
                 <button type="submit">Invia</button>
             </div>
         </form>
-    </div>
 
     <?php include "footer.php"; ?>
 

@@ -66,15 +66,33 @@ html {
 }
 
 .table {
-    width: 100%;
+    width: calc(100% - 40px);
     /* border-collapse: collapse; */
+}
+
+table tr {    
+    background: white;
+}
+
+table tr:hover {    
+    background: #d3f4ff;
 }
 
 .table th,
 .table td {
     text-align: center;
     border: 1px solid gray;
-    background: white;
+    padding: 3px 10px;
+}
+
+.table th {
+    background: #009688;
+    color: white;
+}
+
+.table th:nth-last-child(1),
+.table th:nth-last-child(2) {
+    width: 10px;
 }
 
 .num-rows {
@@ -91,7 +109,7 @@ html {
     top: 49px;
     bottom: 38px;
     left: 0;
-    right: 80%;
+    width: 200px;
     background: #555555;
     padding: 20px 10px;
 }
@@ -100,10 +118,11 @@ html {
     position: fixed;
     top: 49px;
     bottom: 38px;
-    left: 20%;
-    right: 0;
+    left: 200px;
+    width: 100%;
     background: #f5f5f5;
     padding: 20px;
+    transition: left 1s ease;
 }
 
 .page-content.sidebar-close {

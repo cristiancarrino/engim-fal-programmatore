@@ -18,7 +18,7 @@
             LEFT JOIN subject ON
                 vote.subject_id = subject.id
             ORDER BY
-                subject.name DESC,
+                student.lastname ASC,
                 vote.vote DESC
         ";
         $result = $conn->query($sql);
