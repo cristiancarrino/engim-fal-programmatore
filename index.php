@@ -1,7 +1,8 @@
-<?php include "navbar.php"; ?>
+<?php 
+    $title = 'Homepage';
+    include "navbar.php"; 
+?>
 
     <h1>Homepage</h1>
     
-    <?php include "footer.php"; ?>
-</body>
-</html>
+<?php include "footer.php"; ?>

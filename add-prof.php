@@ -21,8 +21,5 @@
 
     <a href="lista-prof.php">Torna alla lista professori</a>
 
-    <?php include "footer.php"; ?>
-</body>
-</html>
-
+<?php include "footer.php"; ?>
 <?php include "close-connection.php"; ?>

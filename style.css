@@ -4,11 +4,6 @@ html {
     padding: 0;
 }
 
-body {
-    padding-top: 47px;
-    padding-bottom: 38px;
-}
-
 .clearfix {
     clear: both;
 }
@@ -21,7 +16,6 @@ body {
     top: 0;
     width: 100%;
     line-height: 27px;
-    border-bottom: 1px solid white;
 }
 
 .navbar h1 {
@@ -56,7 +50,6 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid white;
 }
 
 .float-right {
@@ -72,19 +65,6 @@ body {
     cursor: pointer;
 }
 
-.sidebar {
-    float: left;
-    width: 200px;
-    border-right: 1px solid gray;
-    background: #555555;
-    height: calc(100vh - 49px - 38px);
-    color: white;
-}
-
-.page-content {
-    float: left;
-}
-
 .table {
     width: 100%;
     /* border-collapse: collapse; */
@@ -94,4 +74,38 @@ body {
 .table td {
     text-align: center;
     border: 1px solid gray;
+    background: white;
+}
+
+.num-rows {
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.num-rows span {
+    color: red;
+}
+
+.sidebar {
+    position: fixed;
+    top: 49px;
+    bottom: 38px;
+    left: 0;
+    right: 80%;
+    background: #555555;
+    padding: 20px 10px;
+}
+
+.page-content {
+    position: fixed;
+    top: 49px;
+    bottom: 38px;
+    left: 20%;
+    right: 0;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.page-content.sidebar-close {
+    left: 0;
 }

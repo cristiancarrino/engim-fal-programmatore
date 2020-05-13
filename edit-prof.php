@@ -44,7 +44,5 @@
     <a href="lista-prof.php">Torna alla lista prof</a>
 
     <?php include "footer.php"; ?>
-</body>
-</html>
 
 <?php include "close-connection.php"; ?>

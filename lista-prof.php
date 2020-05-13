@@ -76,7 +76,5 @@
     </form>
 
     <?php include "footer.php"; ?>
-</body>
-</html>
 
 <?php include "close-connection.php"; ?>

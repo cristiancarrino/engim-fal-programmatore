@@ -20,7 +20,5 @@
     <a href="lista-studenti.php">Torna alla lista studenti</a>
 
     <?php include "footer.php"; ?>
-</body>
-</html>
 
 <?php include "close-connection.php"; ?>
