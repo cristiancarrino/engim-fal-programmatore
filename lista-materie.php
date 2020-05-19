@@ -37,6 +37,40 @@ ORDER BY
         }
     ?>
 
+<hr>
+
+    <h3>Aggiungi una materia</h3>
+    <form action="add-student.php">
+        <div>
+            <div>
+                <label for="">Nome:</label>
+            </div>
+            <div>
+                <input type="text" placeholder="Aggiungi nome" name="name">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="">Prof id:</label>
+            </div>
+            <div>
+                <select name="prof_id">
+                    <option value="">-</option>
+                    <option value="1">Maria Grazia Marinò</option>
+                    <option value="2">Gabriele Montinaro</option>
+                    <option value="3">Gloria Liuni</option>
+                    <option value="4">Cristian Carrino</option>
+                    <option value="5">Dario Mennillo</option>
+                    <option value="6">Daniele Gontero</option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <button type="submit">Invia</button>
+        </div>
+    </form>
+
     <?php include "footer.php"; ?>
 
 <?php include "close-connection.php"; ?>
