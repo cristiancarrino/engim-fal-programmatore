@@ -59,30 +59,42 @@
 
     <hr>
 
-    <h3>Aggiungi uno studente</h3>
-    <form action="add-student.php">
+    <h3>Aggiungi un voto</h3>
+    <form action="add-vote.php">
         <div>
             <div>
-                <label for="">Nome:</label>
+                <label for="">Studente:</label>
             </div>
             <div>
-                <input type="text" placeholder="Aggiungi nome" name="firstname">
+                <!-- <input type="text" placeholder="Scegli studente" name="student_id"> -->
+                <select name="student_id">
+                    <?php
+                        $students = $conn->query("SELECT * FROM student ORDER BY lastname");
+                        while($row = $students->fetch_assoc()) {
+                            echo '<option value="' . $row["id"] . '">' . $row["lastname"] . ' ' . $row["firstname"] . '</option>';
+                        }
+                    ?>
+                </select>
             </div>
         </div>
         <div>
             <div>
-                <label for="">Cognome:</label>
+                <label for="">Materia:</label>
             </div>
             <div>
-                <input type="text" placeholder="Aggiungi cognome" name="lastname">
+                <!-- <input type="text" placeholder="Scegli materia" name="subject_id"> -->
+                <select name="subject_id">
+                    <option value="1">HTML</option>
+                    <option value="2">Wordpress</option>
+                </select>
             </div>
         </div>
         <div>
             <div>
-                <label for="">Età:</label>
+                <label for="">Voto:</label>
             </div>
             <div>
-                <input type="number" placeholder="Aggiungi età" name="age">
+                <input type="number" placeholder="Voto" name="vote">
             </div>
         </div>
 
