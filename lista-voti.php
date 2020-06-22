@@ -66,7 +66,6 @@
                 <label for="">Studente:</label>
             </div>
             <div>
-                <!-- <input type="text" placeholder="Scegli studente" name="student_id"> -->
                 <select name="student_id">
                     <?php
                         $students = $conn->query("SELECT * FROM student ORDER BY lastname");
@@ -82,7 +81,6 @@
                 <label for="">Materia:</label>
             </div>
             <div>
-                <!-- <input type="text" placeholder="Scegli materia" name="subject_id"> -->
                 <select name="subject_id">
                     <option value="1">HTML</option>
                     <option value="2">Wordpress</option>

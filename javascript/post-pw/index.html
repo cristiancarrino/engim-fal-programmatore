@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizi</title>
+</head>
+<body>
+    <h3>Numeri: </h3>
+    <div>
+        A: <input type="number" id="a" value="3">
+    </div>
+    
+    <div>
+        B: <input type="number" id="b" value="8">
+    </div>
+    
+    <hr>
+
+    <h3>Somma:</h3>
+    <div id="risultato"></div>
+
+    <button onclick="eseguiSomma()">Somma</button>
+
+    <script src="main.js"></script>
+
+    <script>
+        function eseguiSomma () {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+
+            var totale = somma(a, b);
+            document.getElementById("risultato").textContent = totale;
+        }
+    </script>
+
+    
+</body>
+</html>
