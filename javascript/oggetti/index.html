@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Esercitazione sugli oggetti</h1>
+
+    <script>
+        var student = {
+            nome: 'Cristian',
+            cognome: 'Carrino',
+            annoDiNascita: 1985,
+            anni: function () {
+                return 2020 - this.annoDiNascita;
+            },
+            nomeCompleto: function () {
+                return this.nome + ' ' + this.cognome;
+            },
+            impostaAnnoDiNascita: function (anno) {
+                this.annoDiNascita = anno;
+            }
+        };
+
+        document.write('<div>Nome: ' + student.nome + '</div>');
+        document.write('<div>Cognome: ' + student.cognome + '</div>');
+        document.write('<div>Anno di nascita: ' + student.annoDiNascita + '</div>');
+        document.write('<div>Anni: ' + student.anni() + '</div>');
+        document.write('<div>Nome completo: ' + student.nomeCompleto() + '</div>');
+
+        student.impostaAnnoDiNascita(1995);
+        document.write('<div>Nuovo anno di nascita: ' + student.annoDiNascita + '</div>');
+        document.write('<div>Anni: ' + student.anni() + '</div>');
+
+        student.colorePreferito = 'Giallo';
+        document.write('<div>Colore preferito: ' + student.colorePreferito + '</div>');
+
+        student.colorePreferito = 'Rosso';
+        document.write('<div>Nuovo colore preferito: ' + student.colorePreferito + '</div>');
+
+        student.ciboPreferito = 'Pasta al pesto';
+        document.write('<div>Cibo preferito: ' + student.ciboPreferito + '</div>');
+
+        student.impostaCiboPreferito = function (cibo) {
+            this.ciboPreferito = cibo;
+        }
+
+        student.impostaCiboPreferito('Lasagne al forno');
+        document.write('<div>Nuovo cibo preferito: ' + student.ciboPreferito + '</div>');
+
+        student.voti = [8, 5, 4.5, 6, 9.5, 7];
+        document.write('<div>Voti: ' + student.voti.join(', ') + '</div>');
+
+        student.sommaVoti = function () {
+            var somma = 0;
+
+            for (var i = 0; i < this.voti.length; i++) {
+                somma += this.voti[i];
+            }
+
+            return somma;
+        }
+
+        document.write('<div>Somma voti: ' + student.sommaVoti() + '</div>');
+
+        student.mediaVoti = function () {
+            var somma = 0;
+
+            for (var i = 0; i < this.voti.length; i++) {
+                somma += this.voti[i];
+            }
+
+            return somma / this.voti.length;
+        }
+
+        document.write('<div>Media voti: ' + student.mediaVoti() + '</div>');
+
+        student.getVoto = function (pippo) {
+            return this.voti[pippo - 1];
+        }
+
+        document.write('<div>Voto numero 1: ' + student.getVoto(1) + '</div>');
+        document.write('<div>Voto numero 2: ' + student.getVoto(2) + '</div>');
+        document.write('<div>Voto numero 3: ' + student.getVoto(3) + '</div>');
+        document.write('<div>Voto numero 6: ' + student.getVoto(6) + '</div>');
+
+        student.minVote = function () {
+            var min = this.voti[0];
+
+            for (var i = 1; i < this.voti.length; i++) {
+                if (this.voti[i] < min) {
+                    min = this.voti[i];
+                }
+            }
+
+            return min;
+        }
+
+        document.write('<div>Il voto più basso è: ' + student.minVote() + '</div>');
+
+        student.maxVote = function () {
+            var max = this.voti[0];
+
+            for (var i = 1; i < this.voti.length; i++) {
+                if (this.voti[i] > max) {
+                    max = this.voti[i];
+                }
+            }
+
+            return max;
+        }
+
+        document.write('<div>Il voto più alto è: ' + student.maxVote() + '</div>');
+
+        student.votiInsufficienti = function () {
+            var risultato = [];
+
+            for (var i = 0; i < this.voti.length; i++) {
+                if (this.voti[i] < 6) {
+                    risultato.push(this.voti[i]);
+                }
+            }
+
+            return risultato;
+        }
+
+        document.write('<div>Voti insufficienti: ' + student.votiInsufficienti().join(', ') + '</div>');
+
+        student.votiSufficienti = function () {
+            var risultato = [];
+
+            for (var i = 0; i < this.voti.length; i++) {
+                if (this.voti[i] >= 6) {
+                    risultato.push(this.voti[i]);
+                }
+            }
+
+            return risultato;
+        }
+
+        document.write('<div>Voti sufficienti: ' + student.votiSufficienti().join(', ') + '</div>');
+    </script>
+</body>
+</html>
