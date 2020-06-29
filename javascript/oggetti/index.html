@@ -141,6 +141,28 @@
         }
 
         document.write('<div>Voti sufficienti: ' + student.votiSufficienti().join(', ') + '</div>');
+
+        student.addVote = function (vote) {
+            this.voti.push(vote);
+        }
+
+        student.addVote(9);
+        document.write('<div>Voti: ' + student.voti.join(', ') + '</div>');
+        document.write('<div>Media voti: ' + student.mediaVoti() + '</div>');
+
+        student.votiOttimi = function () {
+            var risultato = [];
+
+            for (var i = 0; i < this.voti.length; i++) {
+                if (this.voti[i] >= 8) {
+                    risultato.push(this.voti[i]);
+                }
+            }
+
+            return risultato;
+        }
+
+        document.write('<div>Voti ottimi: ' + student.votiOttimi().join(', ') + '</div>');
     </script>
 </body>
 </html>
