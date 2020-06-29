@@ -26,12 +26,12 @@
             
             <select name="prof_id">
                 <option value="">-</option>
-                <option value="1" <?php echo $subject["prof_id"] == 1 ? 'selected' : '' ?>>Maria Grazia Marinò</option>
-                <option value="2" <?php echo $subject["prof_id"] == 2 ? 'selected' : '' ?>>Gabriele Montinaro</option>
-                <option value="3" <?php echo $subject["prof_id"] == 3 ? 'selected' : '' ?>>Gloria Liuni</option>
-                <option value="4" <?php echo $subject["prof_id"] == 4 ? 'selected' : '' ?>>Cristian Carrino</option>
-                <option value="5" <?php echo $subject["prof_id"] == 5 ? 'selected' : '' ?>>Dario Mennillo</option>
-                <option value="6" <?php echo $subject["prof_id"] == 6 ? 'selected' : '' ?>>Daniele Gontero</option>
+                <?php
+                    $prof = $conn->query("SELECT * FROM prof ORDER BY lastname");
+                    while($row = $prof->fetch_assoc()) {
+                        echo '<option value="' . $row["id"] . '"' . ($row["id"] == $subject["prof_id"] ? 'selected' : '') . '>' . $row["lastname"] . ' ' . $row["firstname"] . '</option>';
+                    }
+                ?>
             </select>
         </div>
 

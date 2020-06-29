@@ -1,46 +1,46 @@
 <?php include "create-connection.php"; ?>
 
-<!--
-SELECT 
-	student.firstname, 
-    student.lastname, 
-    subject.name, 
-    vote.vote
-FROM student 
-LEFT JOIN vote ON 
-	student.id = vote.student_id 
-LEFT JOIN subject ON 
-	vote.subject_id = subject.id 
-ORDER BY 
-	subject.name DESC,
-    vote.vote DESC
--->
-
 <?php $title = "Lista materie"; ?> 
 <?php include "navbar.php"; ?>
 
     <h1>Lista materie</h1>
 
     <?php
-        $sql = "SELECT subject.id, subject.name, prof.firstname, prof.lastname FROM subject JOIN prof ON subject.prof_id = prof.id";
+        $sql = "SELECT subject.*, prof.firstname, prof.lastname FROM subject JOIN prof ON subject.prof_id = prof.id ORDER BY subject.name";
         $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-                echo "id: " . $row["id"]. " - Name: " . $row["name"]. " - Prof: " . $row["firstname"] . " " . $row["lastname"]. "<br>";
-            }
-
-            echo "Numero di risultati: " . $result->num_rows;
-        } else {
-            echo "0 results";
-        }
     ?>
 
-<hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome materia</th>
+                <th>Professore/ssa</th>
+                <th>Modifica</th>
+                <th>Cancella</th>
+            </tr>
+        </thead>
+        <tbody>            
+            <?php
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr>
+                        <td>" . $row["id"]. "</td>
+                        <td>" . $row["name"]. "</td>
+                        <td>" . $row["lastname"]. " " . $row["firstname"]. "</td>
+                        <td><a href='edit-subject.php?id=" . $row["id"] . "'>Modifica</a></td>
+                        <td><a href='delete-subject.php?id=" . $row["id"] . "'>Cancella</a></td>
+                    </tr>";
+                }
+            ?>
+        </tbody>
+    </table>
+
+    <div class="num-rows">Numero di risultati: <span><?php echo $result->num_rows; ?></span></div>
+
+    <hr>
 
     <h3>Aggiungi una materia</h3>
-    <form action="add-student.php">
+    <form action="add-subject.php">
         <div>
             <div>
                 <label for="">Nome:</label>
@@ -55,13 +55,13 @@ ORDER BY
             </div>
             <div>
                 <select name="prof_id">
-                    <option value="">-</option>
-                    <option value="1">Maria Grazia Marinò</option>
-                    <option value="2">Gabriele Montinaro</option>
-                    <option value="3">Gloria Liuni</option>
-                    <option value="4">Cristian Carrino</option>
-                    <option value="5">Dario Mennillo</option>
-                    <option value="6">Daniele Gontero</option>
+                    <option>-</option>
+                    <?php
+                        $prof = $conn->query("SELECT * FROM prof ORDER BY lastname");
+                        while($row = $prof->fetch_assoc()) {
+                            echo '<option value="' . $row["id"] . '">' . $row["lastname"] . ' ' . $row["firstname"] . '</option>';
+                        }
+                    ?>
                 </select>
             </div>
         </div>

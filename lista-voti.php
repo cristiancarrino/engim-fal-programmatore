@@ -45,8 +45,8 @@
                         <td>" . $row["id"] . "</td>
                         <td>" . $row["name"]. "</td>
                         <td>" . $row["vote"]. "</td>
-                        <td><a href='edit-student.php?id=" . $row["id"] . "'>Modifica</a></td>
-                        <td><a href='delete-student.php?id=" . $row["id"] . "'>Cancella</a></td>
+                        <td><a href='edit-vote.php?id=" . $row["id"] . "'>Modifica</a></td>
+                        <td><a href='delete-vote.php?id=" . $row["id"] . "'>Cancella</a></td>
                     </tr>";
                 }
             ?>
@@ -82,8 +82,12 @@
             </div>
             <div>
                 <select name="subject_id">
-                    <option value="1">HTML</option>
-                    <option value="2">Wordpress</option>
+                    <?php
+                        $subjects = $conn->query("SELECT * FROM subject ORDER BY name");
+                        while($row = $subjects->fetch_assoc()) {
+                            echo '<option value="' . $row["id"] . '">' . $row["name"] . '</option>';
+                        }
+                    ?>
                 </select>
             </div>
         </div>
