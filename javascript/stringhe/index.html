@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercitazione sulle stringhe</title>
+</head>
+<body>
+    <h1>Esercitazione sulle stringhe :)</h1>
+
+    <script>
+        var aperturaDiv = '<div>';
+        var text = 'Oggi è l\'ultima lezione';
+        var text2 = ', Cristian mi mancherà moltissimo :(';
+        var chiusuraDiv = '</div>';
+
+        var stringaUnica = aperturaDiv + text + text2 + chiusuraDiv;
+        var stringaOk = text + text2;
+
+        document.write(stringaUnica);
+
+        document.write(aperturaDiv + 'La nostra stringa contiene ' + stringaOk.length + ' caratteri.' + chiusuraDiv);        
+        
+        document.write(aperturaDiv + 'Il carattere alla posizione 0 è ' + stringaOk.charAt(0) + chiusuraDiv);
+        document.write(aperturaDiv + 'Il carattere alla posizione 3 è ' + stringaOk.charAt(3) + chiusuraDiv);
+
+        document.write(aperturaDiv + 'La stringa "Oggi" la trovo alla posizione ' + stringaOk.indexOf('Oggi') + chiusuraDiv);
+        document.write(aperturaDiv + 'La stringa "ggi" la trovo alla posizione ' + stringaOk.indexOf('ggi') + chiusuraDiv);
+        document.write(aperturaDiv + 'La stringa "Cristian" la trovo alla posizione ' + stringaOk.indexOf('Cristian') + chiusuraDiv);
+        document.write(aperturaDiv + 'La stringa "cristian" la trovo alla posizione ' + stringaOk.indexOf('cristian') + chiusuraDiv);
+
+        var nuovaStringa = stringaOk.replace('Cristian', 'Dino');
+        document.write(aperturaDiv + nuovaStringa + chiusuraDiv);
+
+        var sottoStringa = stringaOk.substring(25, 45);
+        document.write(aperturaDiv + sottoStringa + chiusuraDiv);
+
+        document.write(aperturaDiv + 'Stringa tutta minuscola: ' + stringaOk.toLowerCase() + chiusuraDiv);
+        document.write(aperturaDiv + 'Stringa tutta maiuscola: ' + stringaOk.toUpperCase() + chiusuraDiv);
+
+        console.log(stringaOk);
+
+        var array1 = stringaOk.split(' ')
+        console.log(array1);
+
+        var array2 = stringaOk.split(', ')
+        console.log(array2);
+
+        var array3 = stringaOk.split('mi mancherà')
+        console.log(array3);
+    </script>
+</body>
+</html>
